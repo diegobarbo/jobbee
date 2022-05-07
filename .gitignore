@@ -1,0 +1,9 @@
+backend/.env
+
+.mypy_cache
+
+.venv
+
+account/__pycache__
+
+backend/__pycache__
