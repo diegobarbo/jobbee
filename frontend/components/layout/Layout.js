@@ -5,11 +5,11 @@ import Script from "next/script";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children, title = "Jobbee - Find your job now!" }) => {
+const Layout = ({ children, title = "Find your job now!" }) => {
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{title} - Jobbee</title>
       </Head>
       <Script
         strategy="beforeInteractive"

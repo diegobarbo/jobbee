@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
 mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
 
 const JobDetails = ({ job, candidates }) => {
-  useEffect(async () => {
+  useEffect(() => {
     const coordinates = job.point.split("(")[1].replace(")", "").split(" ");
 
     const map = new mapboxgl.Map({
@@ -14,6 +14,9 @@ const JobDetails = ({ job, candidates }) => {
       center: coordinates,
       zoom: 10.5,
     });
+
+    // add marker on the map
+    new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
   }, []);
 
   return (
